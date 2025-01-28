@@ -2,7 +2,7 @@
   <div class="grid z-10 grid-cols-2 gap-x-8 items-stretch px-20 h-screen">
     <div class="grid content-center">
       <h1 class="mb-8 text-3xl font-bold">
-        Get started!
+        Vamos Começar!
       </h1>
       <p>Criar o seu primeiro quadro</p>
       <input

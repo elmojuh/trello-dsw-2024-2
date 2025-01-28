@@ -4,6 +4,5 @@
     class="fixed bottom-2 w-full text-xs text-center text-blue10 opacity-75"
     href="https://elmosprofile.vercel.app"
   >
-    Desenvolvido por BrenoFil, ElmoJuh e Marcio
   </a>
 </template>
