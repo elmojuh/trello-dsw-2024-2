@@ -2,7 +2,7 @@
   <div class="grid grid-cols-2 gap-x-8 items-stretch px-28 -mt-10 h-screen">
     <div class="grid content-center">
       <h1 class="mb-8 text-3xl font-bold">
-        Welcome back!
+        Bem vindo de volta!
       </h1>
       <label for="email">Email</label>
       <input
@@ -12,13 +12,13 @@
         data-cy="login-email"
         name="email"
       >
-      <label for="password">Password</label>
+      <label for="password">Senha</label>
       <input
         v-model="loginForm.password"
         type="password"
         data-cy="login-password"
         class="px-2 mb-3 w-full h-10 bg-gray3 focus:bg-white rounded-sm"
-        placeholder="Password"
+        placeholder="Senha"
         name="password"
         @keyup.enter="
           login(loginForm.email, loginForm.password).then(() => {
@@ -47,7 +47,7 @@
         class="mt-4 text-sm text-center underline"
         to="/signup"
       >
-        Don’t have an account? Sign up here.
+        Não tem conta? Clique aqui!
       </router-link>
     </div>
     <img

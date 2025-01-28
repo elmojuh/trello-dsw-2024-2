@@ -8,7 +8,7 @@
       v-model="cardTitle"
       class="py-1 px-2 w-full h-16 text-sm rounded border-b border-gray7 outline-none resize-none"
       data-cy="new-card-input"
-      placeholder="Enter a title for this card..."
+      placeholder="Adicione um título para este cartão..."
       @keydown.enter.prevent="addCard"
       @keyup.esc.prevent="
         emit('toggleInput', false);

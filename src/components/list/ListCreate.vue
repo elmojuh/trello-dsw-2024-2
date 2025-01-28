@@ -9,7 +9,7 @@
       v-model="listTitle"
       class="py-2 px-2 w-full h-9 text-sm rounded-sm border-2 border-transparent focus:border-blue6 outline-none"
       data-cy="add-list-input"
-      placeholder="Enter list title..."
+      placeholder="Titulo da lista..."
       @keyup.enter.prevent="addList()"
       @keyup.esc.prevent="
         createListInput = false;
@@ -18,7 +18,7 @@
     >
     <div>
       <SaveButton
-        buttontext="Add list"
+        buttontext="Adicionar lista"
         @click="addList()"
       />
       <Cross
@@ -37,7 +37,7 @@
     data-cy="create-list"
     @click="enableInput()"
   >
-    <Plus class="inline-block w-3 h-3" /> {{ !lists.length ? 'Add a list' : 'Add another list' }}
+    <Plus class="inline-block w-3 h-3" /> {{ !lists.length ? 'Adicionar lista' : 'Adicionar outra lista' }}
   </div>
 </template>
 

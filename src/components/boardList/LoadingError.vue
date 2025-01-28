@@ -10,7 +10,7 @@
     <a
       href="/"
       class="block font-semibold text-center text-blue7"
-    > Try again </a>
+    > Tente novamente </a>
   </div>
 </template>
 

@@ -12,5 +12,6 @@ cypress/downloads
 backend/data/uploaded/*
 .env
 .vscode/*
+.idea
 
 !/**/.gitkeep

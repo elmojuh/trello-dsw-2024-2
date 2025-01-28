@@ -2,7 +2,7 @@
   <div class="bg-white">
     <div class="container py-8 px-6 mx-auto">
       <h1 class="mt-4 text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl">
-        Pricing Plan
+        Planejar Preços
       </h1>
       <div
         v-if="pricing.discountEligible"
@@ -57,7 +57,7 @@
           data-cy="find-location"
           @click="geolocation"
         >
-          Find my location
+          Encontre minha localização
         </button>
       </div>
       <div

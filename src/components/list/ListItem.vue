@@ -35,7 +35,7 @@
         v-if="loadingListCards[list.id]"
         class="block place-self-center text-xs text-center"
       >
-        <LoadingIcon class="inline-block mb-1" />&nbsp;&nbsp;Loading cards ...
+        <LoadingIcon class="inline-block mb-1" />&nbsp;&nbsp;Carregando Cards ...
       </div>
       <draggable
         :list="list.cards"
@@ -55,7 +55,7 @@
         data-cy="new-card"
         @click="showCardCreate(true)"
       >
-        <Plus class="inline-block w-3 h-3" />Add another card
+        <Plus class="inline-block w-3 h-3" />Adicionar outro card
       </div>
       <CardCreateInput
         v-else

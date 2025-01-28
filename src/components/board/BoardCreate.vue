@@ -7,7 +7,7 @@
     @click.prevent="focusNewBoardInput"
   >
     <h1 v-show="!newBoardInputActive">
-      Create new board
+      Criar um novo Quadro
     </h1>
     <input
       v-show="newBoardInputActive"
@@ -15,7 +15,7 @@
       v-model="newBoardTitle"
       class="new-board-input"
       data-cy="new-board-input"
-      placeholder="Add board title"
+      placeholder="Adicionar titulo do quadro"
       @keyup.enter.prevent="redirectToNewBoard()"
     >
     <div
@@ -28,7 +28,7 @@
       />
       <SaveButton
         data-cy="new-board-create"
-        buttontext="Create board"
+        buttontext="Criar quadro"
         @click.stop="redirectToNewBoard()"
       />
     </div>
@@ -90,11 +90,11 @@ h1 {
 
 .create-board {
   @apply bg-gray6
-    cursor-pointer 
-    grid 
-    h-36 
-    px-4 
-    py-3 
+    cursor-pointer
+    grid
+    h-36
+    px-4
+    py-3
     rounded-sm
     w-72;
 }

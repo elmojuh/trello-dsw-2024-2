@@ -8,7 +8,7 @@
       v-if="state.loading"
       class="grid justify-center content-center h-screen loading"
     >
-      <div><LoadingIcon class="inline-block mb-1" />&nbsp;&nbsp;Loading data ...</div>
+      <div><LoadingIcon class="inline-block mb-1" />&nbsp;&nbsp;Carregando dados...</div>
     </div>
     <!-- ERROR STATE -->
     <div
@@ -18,7 +18,7 @@
     >
       <span class="block mb-4 text-8xl font-bold text-center text-gray-200">{{ state.loadingError.status }}</span>
       <p class="block mb-4 text-center text-gray-400">
-        {{ state.loadingError.message || 'There was an error loading board' }}
+        {{ state.loadingError.message || 'Há um erro ao carregar o quadro' }}
       </p>
       <router-link
         to="/"

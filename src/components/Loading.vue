@@ -3,12 +3,12 @@
     v-if="loading"
     class="loading"
   >
-    <LoadingIcon class="inline-block mb-1" />&nbsp;&nbsp;Loading data ...
+    <LoadingIcon class="inline-block mb-1" />&nbsp;&nbsp;Carregando dados ...
     <div
       v-if="loadingError.tooLong"
       class="block mt-4"
     >
-      This is taking too long.
+      Isso está demorando mais que o normal.
       <a href="/"> Reload? </a>
     </div>
   </div>

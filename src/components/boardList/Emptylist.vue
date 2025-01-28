@@ -4,13 +4,13 @@
       <h1 class="mb-8 text-3xl font-bold">
         Get started!
       </h1>
-      <p>Go ahead and create your first board!</p>
+      <p>Criar o seu primeiro quadro</p>
       <input
         v-model="newBoardTitle"
         type="text"
         data-cy="first-board"
         class="px-2 mt-4 w-full h-8 bg-white rounded-sm border-2"
-        placeholder="Name of your first board"
+        placeholder="Nome do seu primeiro quadro"
         name="newBoard"
         @keyup.enter.prevent="redirectToNewBoard()"
       >

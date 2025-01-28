@@ -12,11 +12,11 @@
     v-if="dropdown"
     v-click-away="onClickAway"
     data-cy="list-dropdown"
-    :header="'List actions'"
+    :header="'Lista de ações'"
     @close="hideDropdown()"
   >
     <DropdownItem
-      item-text="Add another card"
+      item-text="Adicionar outro Card"
       data-cy="card-add"
       @click="
         emit('toggle-input', true);
@@ -24,7 +24,7 @@
       "
     />
     <DropdownItem
-      item-text="Delete list"
+      item-text="Deletar lista"
       :warning="true"
       data-cy="delete-list"
       @click="

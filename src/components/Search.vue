@@ -5,7 +5,7 @@
   >
     <div class="shadow-lg">
       <div class="mb-1 text-xs text-gray-200">
-        Search cards
+        Buscar cards
       </div>
       <input
         ref="search"

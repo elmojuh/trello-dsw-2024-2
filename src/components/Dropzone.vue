@@ -3,7 +3,7 @@
     class="w-full h-40 border-4 border-gray-400 border-dashed"
     data-cy="upload-image"
     :class="isDragActive && 'border-gray-800'"
-    accept="image/png, image/gif, image/jpeg"
+    accept="application/pdf"
     @dragenter.prevent="dragActive"
     @dragleave.prevent="dragInactive"
     @dragover.prevent
@@ -24,13 +24,13 @@
         for="dropzoneFile"
         class="self-start place-self-center py-1.5 px-3 mt-2 text-gray1 bg-gray-400 cursor-pointer"
         :class="isDragActive && 'bg-gray-800'"
-      >select image</label>
+      >selecionar pdf</label>
     </div>
     <input
       id="dropzoneFile"
       type="file"
       class="hidden"
-      accept="image/png, image/jpeg"
+      accept="application/pdf"
       @input="upload"
     >
   </div>

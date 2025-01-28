@@ -2,7 +2,7 @@
   <div class="grid grid-cols-2 gap-x-8 items-stretch px-28 -mt-10 h-screen">
     <div class="grid content-center">
       <h1 class="mb-8 text-3xl font-bold">
-        Create a new account
+        Criar uma nova conta
       </h1>
       <label for="email">Email</label>
       <input
@@ -12,13 +12,13 @@
         name="email"
         data-cy="signup-email"
       >
-      <label for="password">Password</label>
+      <label for="password">Senha</label>
       <input
         v-model="signupForm.password"
         type="password"
         class="px-2 mb-3 w-full h-10 bg-gray3 focus:bg-white rounded-sm"
         data-cy="signup-password"
-        placeholder="Password"
+        placeholder="Senha"
         name="password"
         @keyup.enter="
           signup(signupForm.email, signupForm.password, signupForm.welcomeEmail).then(() => {
@@ -36,7 +36,7 @@
         <label
           class="text-sm"
           for="welcomeEmail"
-        >Send me a welcome email</label>
+        >Me envie email de boas vindas</label>
       </div>
       <button
         class="py-2 w-full text-white bg-green7 hover:bg-green6"
@@ -47,7 +47,7 @@
           })
         "
       >
-        Create account
+        Criar conta
       </button>
       <GoogleSignIn
         v-if="googleEnabled === 'true'"
@@ -59,7 +59,7 @@
         class="mt-4 text-sm text-center underline"
         to="/login"
       >
-        Already have an account? Log in here
+        Já tem uma conta? Log in aqui!
       </router-link>
     </div>
     <img

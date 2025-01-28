@@ -36,7 +36,7 @@
             "
           >
           <h2 class="text-sm text-gray10">
-            in list <span
+            Na lista <span
               class="underline"
               data-cy="card-list-name"
             >{{ cardListName }}</span>
@@ -44,7 +44,7 @@
         </div>
         <div class="mb-4 ml-9">
           <h2 class="block text-sm text-gray10 cursor-default">
-            DUE DATE
+            Data
           </h2>
           <div class="inline-block mt-2">
             <Checkbox :card="activeCard" />
@@ -116,7 +116,7 @@
             <Description class="-mb-1 -ml-8 w-5 h-5 text-gray-800 fill-current stroke-current" />
           </div>
           <h1 class="inline-block mb-4 text-lg font-semibold text-black">
-            Description
+            Descrição
           </h1>
           <textarea
             v-model="activeCard.description"
@@ -142,7 +142,7 @@
             <Attachment class="-mb-1 -ml-8 w-5 h-5 text-gray-800 fill-current stroke-current" />
           </div>
           <h1 class="inline-block mb-4 text-lg font-semibold text-black">
-            Image
+            PDF
           </h1>
           <div
             v-if="activeCard.image"
@@ -192,14 +192,14 @@
           data-cy="calendar-button"
           @click="showDate = true"
         >
-          <Clock class="inline-block mr-2 mb-0.5 w-4" />Due date
+          <Clock class="inline-block mr-2 mb-0.5 w-4" />Definir data
         </div>
         <div
           class="py-0.5 px-2 text-sm text-gray-600 bg-gray3 hover:bg-gray5 rounded-sm cursor-pointer"
           data-cy="copy-properties"
           @click="copyProperties(activeCard)"
         >
-          <Copy class="inline-block mr-2 mb-0.5 w-4" />Copy attributes
+          <Copy class="inline-block mr-2 mb-0.5 w-4" />Copiar atributos
         </div>
         <div
           class="py-0.5 px-2 text-sm text-gray-600 bg-gray3 hover:bg-gray5 rounded-sm cursor-pointer"
@@ -209,7 +209,7 @@
             router.push(router.currentRoute.value.path);
           "
         >
-          <Trash class="inline-block mr-2 mb-0.5 w-4" />Delete card
+          <Trash class="inline-block mr-2 mb-0.5 w-4" />Excluir card
         </div>
       </div>
     </div>
