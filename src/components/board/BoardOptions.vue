@@ -11,11 +11,11 @@
       v-if="dropdown"
       v-click-away="onClickAway"
       data-cy="board-dropdown"
-      :header="'Board actions'"
+      :header="'Lista de Ações'"
       @close="hideDropdown()"
     >
       <DropdownItem
-        item-text="Delete board"
+        item-text="Deletar quadro"
         :warning="true"
         data-cy="delete-board"
         @click="

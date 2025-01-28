@@ -1,7 +1,7 @@
 describe('Login', () => {
 
   const user = {
-    email: 'filip@example.com',
+    email: 'elmo@example.com',
     password: 'Asdf.1234#'
   }
 

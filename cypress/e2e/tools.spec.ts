@@ -1,17 +1,17 @@
 describe('Tools', () => {
 
   const body = {
-    email: 'filip@example.com', password: 'Asdf.1234#' 
+    email: 'elmo@example.com', password: 'Asdf.1234#'
   }
 
   beforeEach(() => {
-    
+
     cy.request('POST', '/api/reset')
     cy.signupApi(body)
     cy.addBoardApi('new board')
     cy.addListApi({name: 'new list'})
     cy.addCardApi({name: 'new card'})
-  
+
   });
 
   it('show tools', function() {
@@ -28,9 +28,9 @@ describe('Tools', () => {
 
     cy.getDataCy('card').should('be.visible')
     cy.getDataCy('list').should('be.visible')
-  
+
     cy.window().trigger('keydown', { keyCode: 113, which: 113 })
-  
+
     cy.getDataCy('api-tools')
       .should('be.visible')
 
@@ -40,9 +40,9 @@ describe('Tools', () => {
     cy.wait('@users')
 
     cy
-      .request({ 
-        body, 
-        failOnStatusCode: false, 
+      .request({
+        body,
+        failOnStatusCode: false,
         headers: {
           authorization: `Bearer ${accessToken}`
         },
@@ -55,7 +55,7 @@ describe('Tools', () => {
     cy.getDataCy('card').should('not.exist')
 
     cy.wait('@cards')
-    
+
     // deletes lists
     cy.contains('Lists').click()
     cy.getDataCy('list').should('not.exist')
@@ -69,7 +69,7 @@ describe('Tools', () => {
     cy.wait('@boards')
 
     cy.getDataCy('first-board').should('be.visible')
-    
+
   });
 
   it('resets all', function() {
@@ -80,9 +80,9 @@ describe('Tools', () => {
     cy.intercept('POST', '/api/reset').as('reset')
 
     cy.visit(`/board/${boardId}`)
-  
+
     cy.window().invoke('store').invoke('toggleTools', true)
-  
+
     cy.getDataCy('api-tools')
       .should('be.visible')
 
@@ -96,9 +96,9 @@ describe('Tools', () => {
     cy.getDataCy('first-board').should('be.visible')
 
     cy
-      .request({ 
-        body, 
-        failOnStatusCode: false, 
+      .request({
+        body,
+        failOnStatusCode: false,
         headers: {
           authorization: `Bearer ${accessToken}`
         },
@@ -106,26 +106,26 @@ describe('Tools', () => {
         url: '/api/login'
       }).its('body').should('eq', 'Cannot find user')
 
-  
+
     cy
-      .request({ 
+      .request({
         headers: {
           accept: 'application/json'
-        }, 
-        method: 'GET', 
+        },
+        method: 'GET',
         url: '/api/lists'
       }).its('body').should('be.empty')
 
     cy
-      .request({ 
+      .request({
         headers: {
           accept: 'application/json'
-        }, 
-        method: 'GET', 
+        },
+        method: 'GET',
         url: '/api/cards'
       }).its('body').should('be.empty')
 
   })
-  
+
 });
 

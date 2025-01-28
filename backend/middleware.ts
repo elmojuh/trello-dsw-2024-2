@@ -6,13 +6,13 @@ const socket = require('socket.io-client')('http://localhost:3001');
 module.exports = (req, res, next) => {
 
   const { app: { db }, query } = req;
-  
+
   // prevent from caching database.json file
   // this is different from nocache(), which prevents 304 status codes
   db.assign(
     require('import-fresh')('./backend/data/database.json')
     ).write();
-    
+
     if (req.method === 'POST' && req.path === '/upload') {
     const cardId = req.query.card;
 
@@ -43,13 +43,13 @@ module.exports = (req, res, next) => {
 
     return;
   }
- 
+
 
   if (req.method === 'POST' && req.path === '/welcomeemail') {
     // send welcome email if header is true
     sendmail(
       {
-        from: 'trelloapp@filiphric.sk',
+        from: '',
         html:
           'Your account was successfully created!\nIn the meantime, subscribe to my <a href="https://www.youtube.com/channel/UCDOCAVIhSh5VpJMEfdak1OA">YouTube channel for Cypress tips!</a>',
         subject: 'Welcome to Trello app',
